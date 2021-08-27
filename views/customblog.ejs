@@ -1,0 +1,46 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <h1 class="highblog">
+    <%=bh%>
+  </h1>
+
+  <div class="container innerContainer">
+    <div class="row">
+      <div class="col-12 col-lg-9 col-md-12 col-sm-12">
+
+        <div class="jumbotron">
+    <h1 class="display-4"><%=list[0].title%></h1>
+    <h2 class="lead">By <%=list[0].by%></h2>
+    <hr class="my-4">
+    <% let s = String(list[0].content)%>
+    <% let str = s.split("*"); %>
+    <% str.forEach(function(item){  %>
+    <h4><%=item%></h4>
+    <%    }) %>
+  </div>
+
+
+
+      </div>
+      <div class="col col-lg-3 col-md-12 col-sm-12">
+        <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Suggestions</h5>
+          <p class="card-text">Some quick links for you !</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="/blogs/relationship" class="card-link">Relationship Blogs</a></li>
+          <li class="list-group-item"><a href="/podcast" class="card-link">Curated Podcast & Playlist</a></li>
+          <li class="list-group-item"><a href="/videos/happinessandfun" class="card-link">Useful Videos</a></li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">You’ll find posts about happiness, love,
+             relationships, change, meaning, mindfulness, spirituality, simplicity,
+              minimalism, letting go, and more.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer'); -%>

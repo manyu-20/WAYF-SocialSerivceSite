@@ -1,0 +1,111 @@
+.high{
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.highblog{
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectioneOneContainer{
+  margin-top: 3rem;
+}
+
+.homeh1{
+  font-weight: 500;
+  font-size: 3.5rem;
+}
+
+.videoshigh{
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pera{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.innerContainer{
+  margin-bottom: 4rem;
+}
+
+.blogCard{
+  margin-bottom: 2rem;
+}
+
+#truncate{
+  text-overflow: ellipsis;
+}
+
+.podcastContainer{
+  margin-bottom: 3rem;
+}
+.peraPod{
+  margin-top: 1rem;
+    margin-bottom: 2rem;
+  text-align: center;
+}
+
+.podcastCard{
+  margin-top: 2rem;
+}
+
+.sectionOne h1{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionOne h2{
+  margin-bottom: 2rem;
+}
+
+.column{
+  margin-top: 2rem;
+}
+
+.section-title{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.sectionThreeAbout h1{
+  padding-bottom: 1rem;
+}
+
+body{
+  background-color: #f4eee8;
+font-family: 'Roboto', sans-serif;
+}
+
+nav{
+  background-color: #1d3557;
+}
+
+.contactContainer{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nopeContainer{
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
+
+#truncate{
+  overflow: hidden;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pagina{
+  background-color: #f4eee8;
+}

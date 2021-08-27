@@ -1,0 +1,42 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <div class="container contactContainer">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <form class="form-floating" action="/addQuotes" method="post">
+          <div class="form-group">
+            <select class="custom-select" name="title">
+              <option selected>Open this select menu</option>
+              <option value="Beauty">Beauty</option>
+              <option value="Time">Time</option>
+              <option value="perfection">perfection</option>
+              <option value="Confidence">Confidence</option>
+              <option value="Courage">Courage</option>
+              <option value="Acceptance">Acceptance</option>
+              <option value="Approval">Approval</option>
+              <option value="Anger">Anger</option>
+              <option value="Beliefs">Beliefs</option>
+              <option value="Comfort">Comfort</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Enter - Written By</label>
+            <textarea class="form-control" rows="3" name="by"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea2">Enter Content</label>
+            <textarea class="form-control" name="content" rows="3"></textarea>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control " id="floatingInput"type="password" name="psw" value="" placeholder="Enter Password">
+            <label for="floatingInput">Enter Password</label>
+
+        </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer'); -%>

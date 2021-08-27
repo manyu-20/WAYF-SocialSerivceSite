@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <h1 class="videoshigh">
+    <%=category%>
+  </h1>
+  <!-- <p>
+
+  </p> -->
+  <div class="container innerContainer">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <%  list.forEach(function(item){ %>
+        <% if(categorylow === item.type){ %>
+          <div class="col">
+            <div class="card" data-aos="fade-up">
+              <iframe width="100%" height="315" src="<%=item.src%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="card-body">
+                <h5 class="card-title"><%=item.title%></h5>
+                <p class="card-text"><%=item.info%></p>
+              </div>
+            </div>
+          </div>
+  <%  } %>
+      <%    }) %>
+
+
+
+</div>
+  </div>
+</div>
+
+<%- include('partials/footer'); -%>

@@ -1,0 +1,68 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <h1 class="highblog">
+    <b><%=bh%></b>
+  </h1>
+  <p class="pera">
+    Blog Page
+  </p>
+  <div class="container innerContainer">
+    <div class="row">
+      <div class="col-12 col-lg-9 col-md-12 col-sm-12" data-aos="slide-up">
+
+        <%  list.forEach(function(item){ %>
+          <% if(item.category === blogt){ %>
+        <div class="card text-center blogCard">
+          <div class="card-header">
+          <%="By " + item.by%>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%=item.title%></h5>
+            <p id="truncate" class="card-text"><%=item.content%></p>
+            <a href="/blog/<%=item.category+"/"+item._id%>" class="btn btn-primary">Read More</a>
+          </div>
+          <div class="card-footer text-muted">
+            <%=item.date%>
+          </div>
+        </div>
+    <%  } %>
+        <%    }) %>
+
+
+
+      </div>
+      <div class="col-12 col-lg-3 col-md-0 col-sm-0">
+        <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Suggestions</h5>
+          <p class="card-text">Some quick links for you !</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="/blogs/relationship" class="card-link">Relationship Blogs</a></li>
+          <li class="list-group-item"><a href="/podcast" class="card-link">Curated Podcast & Playlist</a></li>
+          <li class="list-group-item"><a href="/videos/happinessandfun" class="card-link">Useful Videos</a></li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">You’ll find posts about happiness, love,
+             relationships, change, meaning, mindfulness, spirituality, simplicity,
+              minimalism, letting go, and more.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center pagina">
+
+    <% let tot = size; %>
+    <% let num = 1; %>
+    <%  for(let i = 1;i<tot/2;i++){ %>
+      <li class="page-item"><a class="page-link" href="/blogs/<%=blogt%>?page=<%=num%>&size=6"><%=num%></a></li>
+      <% num = num + 1; %>
+    <%    } %>
+
+
+  </ul>
+</nav>
+</div>
+<%- include('partials/footer'); -%>

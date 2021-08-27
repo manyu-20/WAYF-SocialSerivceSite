@@ -1,0 +1,57 @@
+<%- include('partials/header'); -%>
+<div class="container">
+  <h1 class="high">
+    Quotes
+  </h1>
+  <div class="container innerContainer">
+    <div class="row" data-aos="fade-up">
+      <div class="col-12 col-lg-8 col-md-12 ">
+
+        <%  list.forEach(function(item){ %>
+        <div class="card bg-light mb-3" style="width: 100%">
+          <div class="card-body">
+            <h5 class="card-title"><%=item.title%></h5>
+            <h6 class="card-subtitle mb-2 text-muted">By <%=item.by%></h6>
+            <p class="card-text">"<%=item.content%>"</p>
+          </div>
+        </div>
+        <%    }) %>
+
+
+
+      </div>
+      <div class="col col-lg-4 col-md-0 col-sm-0">
+        <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Suggestions</h5>
+          <p class="card-text">Some quick links for you !</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><a href="/blogs/relationship" class="card-link">Relationship Blogs</a></li>
+          <li class="list-group-item"><a href="/podcast" class="card-link">Curated Podcast & Playlist</a></li>
+          <li class="list-group-item"><a href="/videos/happinessandfun" class="card-link">Useful Videos</a></li>
+        </ul>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">You’ll find posts about happiness, love,
+             relationships, change, meaning, mindfulness, spirituality, simplicity,
+              minimalism, letting go, and more.</li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center pagina">
+
+    <% let tot = total; %>
+    <% let num = 1; %>
+    <%  for(let i = 1;i<tot/6;i++){ %>
+      <li class="page-item"><a class="page-link" href="/Quotes/?page=<%=num%>&size=6"><%=num%></a></li>
+      <% num = num + 1; %>
+    <%    } %>
+
+
+  </ul>
+</nav>
+</div>
+<%- include('partials/footer'); -%>
